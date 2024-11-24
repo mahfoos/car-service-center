@@ -47,18 +47,19 @@ A modern web application built with Angular 18 for managing car service center o
 1. **Install dependencies:**
 ```bash
 npm install
+```
+2. **Install JSON Server globally:**
+```bash
 npm install -g json-server
-
-2. **Install JSON Server globally:
-npm install -g json-server
-
-
-3. npm run mock-api
+```
+4.**Run mock API server:**
+```bash
 npm run mock-api
-
-4.Run Angular application:
+```
+4.**Run Angular application:**
+```bash
 ng serve
-
+```
 
 
 
