@@ -1,0 +1,78 @@
+{
+  "COMMON": {
+    "LOADING": "පූරණය වෙමින්...",
+    "SAVE": "සුරකින්න",
+    "CANCEL": "අවලංගු කරන්න",
+    "EDIT": "සංස්කරණය කරන්න",
+    "DELETE": "මකන්න",
+    "ACTIONS": "ක්‍රියාමාර්ග",
+    "CONFIRM_DELETE": "ඔබට මෙය මැකීමට අවශ්‍ය බව විශ්වාසද?",
+    "SUCCESS": "සාර්ථකයි",
+    "ERROR": "දෝෂයකි",
+    "REQUIRED": "මෙම ක්ෂේත්‍රය අවශ්‍යයි"
+  },
+  "NAVIGATION": {
+    "DASHBOARD": "උපකරණ පුවරුව",
+    "CARS": "මෝටර් රථ",
+    "JOBS": "රැකියා",
+    "APP_TITLE": "මෝටර් රථ සේවා මධ්‍යස්ථානය"
+  },
+  "DASHBOARD": {
+    "TITLE": "උපකරණ පුවරුව",
+    "TOTAL_CARS": "මුළු වාහන",
+    "ACTIVE_JOBS": "සක්‍රීය රැකියා",
+    "PENDING_JOBS": "අපේක්ෂිත රැකියා",
+    "COMPLETED_JOBS": "නිම කළ රැකියා",
+    "RECENT_CARS": "මෑත වාහන",
+    "REVENUE_TODAY": "අද ආදායම",
+    "STATS": "සංඛ්‍යාලේඛන"
+  },
+  "CARS": {
+    "TITLE": "මෝටර් රථ",
+    "ADD_CAR": "වාහනයක් එකතු කරන්න",
+    "EDIT_CAR": "වාහනය සංස්කරණය කරන්න",
+    "CAR_DETAILS": "මෝටර් රථ විස්තර",
+    "ADDED_DATE": "එකතු කළ දිනය",
+    "LIST_SUBTITLE": "සේවා මධ්‍යස්ථානයේ සියලුම වාහන ලැයිස්තුව",
+    "FORM": {
+      "MAKE": "නිෂ්පාදනය",
+      "MODEL": "මාදිලිය",
+      "YEAR": "වර්ෂය",
+      "LICENSE_PLATE": "අංක තහඩුව",
+      "OWNER_NAME": "හිමිකරුගේ නම",
+      "OWNER_CONTACT": "හිමිකරුගේ සම්බන්ධතා",
+      "STATUS": "තත්ත්වය"
+    },
+    "STATUS": {
+      "WAITING": "රැඳී සිටිමින්",
+      "IN_SERVICE": "සේවාවේ",
+      "COMPLETED": "සම්පූර්ණයි",
+      "DELIVERED": "බාර දී ඇත"
+    }
+  },
+  "JOBS": {
+    "TITLE": "රැකියා",
+    "ADD_JOB": "රැකියාවක් එකතු කරන්න",
+    "EDIT_JOB": "රැකියාව සංස්කරණය කරන්න",
+    "DATES": "දින",
+    "LIST_SUBTITLE": "සියලුම සේවා රැකියා ලැයිස්තුව",
+    "FORM": {
+      "CAR": "වාහනය",
+      "SELECT_CAR": "වාහනයක් තෝරන්න",
+      "DESCRIPTION": "විස්තරය",
+      "MECHANIC_NAME": "කාර්මිකයාගේ නම",
+      "COST": "පිරිවැය",
+      "STATUS": "තත්ත්වය",
+      "START_DATE": "ආරම්භක දිනය",
+      "EST_COMPLETION_DATE": "අපේක්ෂිත නිම කිරීමේ දිනය",
+      "ACTUAL_COMPLETION_DATE": "සත්‍ය නිම කිරීමේ දිනය",
+      "NOTES": "සටහන්"
+    },
+    "STATUS": {
+      "PENDING": "අපේක්ෂිත",
+      "IN_PROGRESS": "ක්‍රියාත්මක වෙමින්",
+      "COMPLETED": "සම්පූර්ණයි",
+      "ON_HOLD": "තාවකාලිකව නතර කර ඇත"
+    }
+  }
+}

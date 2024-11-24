@@ -1,0 +1,129 @@
+<div class="bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">
+      {{
+        isEdit ? ("CARS.EDIT_CAR" | translate) : ("CARS.ADD_CAR" | translate)
+      }}
+    </h3>
+
+    <form (ngSubmit)="onSubmit()" class="mt-5 space-y-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label
+            for="ownerName"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "CARS.FORM.OWNER_NAME" | translate }}
+          </label>
+          <input
+            type="text"
+            id="ownerName"
+            name="ownerName"
+            [(ngModel)]="car.ownerName"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label
+            for="ownerContact"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "CARS.FORM.OWNER_CONTACT" | translate }}
+          </label>
+          <input
+            type="text"
+            id="ownerContact"
+            name="ownerContact"
+            [(ngModel)]="car.ownerContact"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label for="make" class="block text-sm font-medium text-gray-700">
+            {{ "CARS.FORM.MAKE" | translate }}
+          </label>
+          <input
+            type="text"
+            id="make"
+            name="make"
+            [(ngModel)]="car.make"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label for="model" class="block text-sm font-medium text-gray-700">
+            {{ "CARS.FORM.MODEL" | translate }}
+          </label>
+          <input
+            type="text"
+            id="model"
+            name="model"
+            [(ngModel)]="car.model"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label for="year" class="block text-sm font-medium text-gray-700">
+            {{ "CARS.FORM.YEAR" | translate }}
+          </label>
+          <input
+            type="number"
+            id="year"
+            name="year"
+            [(ngModel)]="car.year"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label
+            for="licensePlate"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "CARS.FORM.LICENSE_PLATE" | translate }}
+          </label>
+          <input
+            type="text"
+            id="licensePlate"
+            name="licensePlate"
+            [(ngModel)]="car.licensePlate"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3">
+        <button
+          type="button"
+          routerLink="/cars"
+          class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          {{ "COMMON.CANCEL" | translate }}
+        </button>
+        <button
+          type="submit"
+          [disabled]="loading"
+          class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          {{
+            loading
+              ? ("COMMON.LOADING" | translate)
+              : isEdit
+              ? ("CARS.EDIT_CAR" | translate)
+              : ("CARS.ADD_CAR" | translate)
+          }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

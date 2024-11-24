@@ -1,0 +1,50 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2020,
+      "licensePlate": "ABC123",
+      "ownerName": "John Doe",
+      "ownerContact": "+1234567890",
+      "dateAdded": "2024-03-20T10:00:00Z",
+      "status": "IN_SERVICE"
+    },
+    {
+      "id": "2",
+      "make": "Honda",
+      "model": "Civic",
+      "year": 2021,
+      "licensePlate": "XYZ789",
+      "ownerName": "Jane Smith",
+      "ownerContact": "+1987654321",
+      "dateAdded": "2024-03-21T09:00:00Z",
+      "status": "WAITING"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "2",
+      "carId": "2",
+      "description": "Break repair",
+      "status": "PENDING",
+      "startDate": "2024-03-21T09:00:00Z",
+      "estimatedCompletionDate": "2024-03-22T15:00:00Z",
+      "cost": 300,
+      "notes": "Front brake pads replacement",
+      "mechanicName": "Tom Wilson"
+    },
+    {
+      "id": "7d01",
+      "carId": "1",
+      "description": "Testing",
+      "status": "IN_PROGRESS",
+      "startDate": "2024-11-05",
+      "estimatedCompletionDate": "2024-11-24T07:18:24.717Z",
+      "cost": 34123,
+      "mechanicName": "mafhoos",
+      "notes": "sadasd"
+    }
+  ]
+}

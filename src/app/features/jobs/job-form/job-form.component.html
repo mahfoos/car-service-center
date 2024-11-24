@@ -1,0 +1,200 @@
+<div class="bg-white shadow sm:rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h3 class="text-lg font-medium leading-6 text-gray-900">
+      {{
+        isEdit ? ("JOBS.EDIT_JOB" | translate) : ("JOBS.ADD_JOB" | translate)
+      }}
+    </h3>
+
+    <form (ngSubmit)="onSubmit()" class="mt-5 space-y-6">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div>
+          <label for="carId" class="block text-sm font-medium text-gray-700">
+            {{ "JOBS.FORM.CAR" | translate }}
+          </label>
+          <select
+            id="carId"
+            name="carId"
+            [(ngModel)]="job.carId"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          >
+            <option value="">{{ "JOBS.FORM.SELECT_CAR" | translate }}</option>
+            @for (car of cars; track car.id) {
+            <option [value]="car.id">
+              {{ car.make }} {{ car.model }} ({{ car.licensePlate }})
+            </option>
+            }
+          </select>
+        </div>
+
+        <div>
+          <label for="status" class="block text-sm font-medium text-gray-700">
+            {{ "JOBS.FORM.STATUS" | translate }}
+          </label>
+          <select
+            id="status"
+            name="status"
+            [(ngModel)]="job.status"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          >
+            @for (status of JobStatus | keyvalue; track status.value) {
+            <option [value]="status.value">
+              {{ "JOBS.STATUS." + status.value | translate }}
+            </option>
+            }
+          </select>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label
+            for="description"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "JOBS.FORM.DESCRIPTION" | translate }}
+          </label>
+          <textarea
+            id="description"
+            name="description"
+            [(ngModel)]="job.description"
+            rows="3"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          ></textarea>
+        </div>
+
+        <div>
+          <label
+            for="mechanicName"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "JOBS.FORM.MECHANIC_NAME" | translate }}
+          </label>
+          <input
+            type="text"
+            id="mechanicName"
+            name="mechanicName"
+            [(ngModel)]="job.mechanicName"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label for="cost" class="block text-sm font-medium text-gray-700">
+            {{ "JOBS.FORM.COST" | translate }}
+          </label>
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <div
+              class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+              <span class="text-gray-500 sm:text-sm">$</span>
+            </div>
+            <input
+              type="number"
+              id="cost"
+              name="cost"
+              [(ngModel)]="job.cost"
+              required
+              min="0"
+              step="0.01"
+              class="mt-1 block w-full pl-7 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label
+            for="startDate"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "JOBS.FORM.START_DATE" | translate }}
+          </label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            [ngModel]="job.startDate | date : 'yyyy-MM-dd'"
+            (ngModelChange)="job.startDate = $event"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        <div>
+          <label
+            for="estimatedCompletionDate"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "JOBS.FORM.EST_COMPLETION_DATE" | translate }}
+          </label>
+          <input
+            type="date"
+            id="estimatedCompletionDate"
+            name="estimatedCompletionDate"
+            [ngModel]="job.estimatedCompletionDate | date : 'yyyy-MM-dd'"
+            (ngModelChange)="job.estimatedCompletionDate = $event"
+            required
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+
+        @if (job.status === JobStatus.COMPLETED) {
+        <div>
+          <label
+            for="actualCompletionDate"
+            class="block text-sm font-medium text-gray-700"
+          >
+            {{ "JOBS.FORM.ACTUAL_COMPLETION_DATE" | translate }}
+          </label>
+          <input
+            type="date"
+            id="actualCompletionDate"
+            name="actualCompletionDate"
+            [ngModel]="job.actualCompletionDate | date : 'yyyy-MM-dd'"
+            (ngModelChange)="job.actualCompletionDate = $event"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          />
+        </div>
+        }
+
+        <div class="sm:col-span-2">
+          <label for="notes" class="block text-sm font-medium text-gray-700">
+            {{ "JOBS.FORM.NOTES" | translate }}
+          </label>
+          <textarea
+            id="notes"
+            name="notes"
+            [(ngModel)]="job.notes"
+            rows="3"
+            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          ></textarea>
+        </div>
+      </div>
+
+      <div class="flex justify-end space-x-3">
+        <button
+          type="button"
+          routerLink="/jobs"
+          class="px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          {{ "COMMON.CANCEL" | translate }}
+        </button>
+        <button
+          type="submit"
+          [disabled]="loading"
+          class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          {{
+            loading
+              ? ("COMMON.LOADING" | translate)
+              : isEdit
+              ? ("JOBS.EDIT_JOB" | translate)
+              : ("JOBS.ADD_JOB" | translate)
+          }}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

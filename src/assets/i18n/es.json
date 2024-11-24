@@ -1,0 +1,78 @@
+{
+  "COMMON": {
+    "LOADING": "Cargando...",
+    "SAVE": "Guardar",
+    "CANCEL": "Cancelar",
+    "EDIT": "Editar",
+    "DELETE": "Eliminar",
+    "ACTIONS": "Acciones",
+    "CONFIRM_DELETE": "¿Está seguro de que desea eliminar esto?",
+    "SUCCESS": "Éxito",
+    "ERROR": "Error",
+    "REQUIRED": "Este campo es requerido"
+  },
+  "NAVIGATION": {
+    "DASHBOARD": "Panel",
+    "CARS": "Coches",
+    "JOBS": "Trabajos",
+    "APP_TITLE": "Centro de Servicio de Automóviles"
+  },
+  "DASHBOARD": {
+    "TITLE": "Panel de Control",
+    "TOTAL_CARS": "Total de Coches",
+    "ACTIVE_JOBS": "Trabajos Activos",
+    "PENDING_JOBS": "Trabajos Pendientes",
+    "COMPLETED_JOBS": "Trabajos Completados",
+    "RECENT_CARS": "Coches Recientes",
+    "REVENUE_TODAY": "Ingresos Hoy",
+    "STATS": "Estadísticas"
+  },
+  "CARS": {
+    "TITLE": "Coches",
+    "ADD_CAR": "Añadir Coche",
+    "EDIT_CAR": "Editar Coche",
+    "CAR_DETAILS": "Detalles del coche",
+    "ADDED_DATE": "Fecha de añadido",
+    "LIST_SUBTITLE": "Lista de todos los coches en el centro de servicio",
+    "FORM": {
+      "MAKE": "Marca",
+      "MODEL": "Modelo",
+      "YEAR": "Año",
+      "LICENSE_PLATE": "Matrícula",
+      "OWNER_NAME": "Nombre del Propietario",
+      "OWNER_CONTACT": "Contacto del Propietario",
+      "STATUS": "Estado"
+    },
+    "STATUS": {
+      "WAITING": "En Espera",
+      "IN_SERVICE": "En Servicio",
+      "COMPLETED": "Completado",
+      "DELIVERED": "Entregado"
+    }
+  },
+  "JOBS": {
+    "TITLE": "Trabajos",
+    "ADD_JOB": "Añadir Trabajo",
+    "EDIT_JOB": "Editar Trabajo",
+    "DATES": "Fechas",
+    "LIST_SUBTITLE": "Lista de todos los trabajos de servicio",
+    "FORM": {
+      "CAR": "Coche",
+      "SELECT_CAR": "Seleccionar coche",
+      "DESCRIPTION": "Descripción",
+      "MECHANIC_NAME": "Nombre del Mecánico",
+      "COST": "Costo",
+      "STATUS": "Estado",
+      "START_DATE": "Fecha de Inicio",
+      "EST_COMPLETION_DATE": "Fecha Estimada de Finalización",
+      "ACTUAL_COMPLETION_DATE": "Fecha Real de Finalización",
+      "NOTES": "Notas"
+    },
+    "STATUS": {
+      "PENDING": "Pendiente",
+      "IN_PROGRESS": "En Progreso",
+      "COMPLETED": "Completado",
+      "ON_HOLD": "En Espera"
+    }
+  }
+}

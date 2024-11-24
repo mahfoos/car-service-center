@@ -1,0 +1,73 @@
+{
+  "COMMON": {
+    "LOADING": "Loading...",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "ACTIONS": "Actions",
+    "CONFIRM_DELETE": "Are you sure you want to delete this?"
+  },
+  "NAVIGATION": {
+    "DASHBOARD": "Dashboard",
+    "CARS": "Cars",
+    "JOBS": "Jobs",
+    "APP_TITLE": "Car Service Center"
+  },
+  "DASHBOARD": {
+    "TITLE": "Dashboard",
+    "TOTAL_CARS": "Total Cars",
+    "ACTIVE_JOBS": "Active Jobs",
+    "PENDING_JOBS": "Pending Jobs",
+    "COMPLETED_JOBS": "Completed Jobs",
+    "RECENT_CARS": "Recent Cars"
+  },
+  "CARS": {
+    "TITLE": "Cars",
+    "ADD_CAR": "Add Car",
+    "EDIT_CAR": "Edit Car",
+    "CAR_DETAILS": "Car Details",
+    "ADDED_DATE": "Added Date",
+    "LIST_SUBTITLE": "A list of all cars in the service center",
+    "FORM": {
+      "MAKE": "Make",
+      "MODEL": "Model",
+      "YEAR": "Year",
+      "LICENSE_PLATE": "License Plate",
+      "OWNER_NAME": "Owner Name",
+      "OWNER_CONTACT": "Owner Contact",
+      "STATUS": "Status"
+    },
+    "STATUS": {
+      "WAITING": "Waiting",
+      "IN_SERVICE": "In Service",
+      "COMPLETED": "Completed",
+      "DELIVERED": "Delivered"
+    }
+  },
+  "JOBS": {
+    "TITLE": "Jobs",
+    "ADD_JOB": "Add Job",
+    "EDIT_JOB": "Edit Job",
+    "LIST_SUBTITLE": "A list of all service jobs",
+    "DATES": "Dates",
+    "FORM": {
+      "CAR": "Car",
+      "SELECT_CAR": "Select a car",
+      "DESCRIPTION": "Description",
+      "MECHANIC_NAME": "Mechanic Name",
+      "COST": "Cost",
+      "STATUS": "Status",
+      "START_DATE": "Start Date",
+      "EST_COMPLETION_DATE": "Estimated Completion Date",
+      "ACTUAL_COMPLETION_DATE": "Actual Completion Date",
+      "NOTES": "Notes"
+    },
+    "STATUS": {
+      "PENDING": "Pending",
+      "IN_PROGRESS": "In Progress",
+      "COMPLETED": "Completed",
+      "ON_HOLD": "On Hold"
+    }
+  }
+}

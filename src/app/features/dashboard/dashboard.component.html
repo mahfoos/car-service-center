@@ -1,0 +1,79 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-900">
+      {{ "DASHBOARD.TOTAL_CARS" | translate }}
+    </h3>
+    <p class="text-3xl font-bold text-blue-600">{{ cars.length }}</p>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-900">
+      {{ "DASHBOARD.ACTIVE_JOBS" | translate }}
+    </h3>
+    <p class="text-3xl font-bold text-green-600">{{ getInProgressCount() }}</p>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-900">
+      {{ "DASHBOARD.PENDING_JOBS" | translate }}
+    </h3>
+    <p class="text-3xl font-bold text-yellow-600">{{ getPendingCount() }}</p>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6">
+    <h3 class="text-lg font-semibold text-gray-900">
+      {{ "DASHBOARD.COMPLETED_JOBS" | translate }}
+    </h3>
+    <p class="text-3xl font-bold text-purple-600">{{ getCompletedCount() }}</p>
+  </div>
+
+  <div class="col-span-full bg-white rounded-lg shadow mt-6">
+    <h3 class="px-6 py-4 text-lg font-semibold border-b">
+      {{ "DASHBOARD.RECENT_CARS" | translate }}
+    </h3>
+    <div class="overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200">
+        <thead class="bg-gray-50">
+          <tr>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            >
+              {{ "CARS.FORM.OWNER_NAME" | translate }}
+            </th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            >
+              {{ "JOBS.FORM.CAR" | translate }}
+            </th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            >
+              {{ "CARS.FORM.LICENSE_PLATE" | translate }}
+            </th>
+            <th
+              class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+            >
+              {{ "CARS.FORM.STATUS" | translate }}
+            </th>
+          </tr>
+        </thead>
+        <tbody class="bg-white divide-y divide-gray-200">
+          @for (car of cars; track car.id) {
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap">{{ car.ownerName }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              {{ car.make }} {{ car.model }}
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">{{ car.licensePlate }}</td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span [class]="getStatusClass(car.status)">
+                {{ car.status }}
+              </span>
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
